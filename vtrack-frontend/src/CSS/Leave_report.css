@@ -1,0 +1,13 @@
+.leave_draft_btn{
+    border-style: none;
+    color: white;
+    background-color: rgb(18, 169, 228);
+    padding: 5px;
+    border-radius: 4px;
+}
+.leaveReportTbl td{
+    padding: 15px;
+}
+.leaveReportTbl th{
+    padding: 5px;
+}

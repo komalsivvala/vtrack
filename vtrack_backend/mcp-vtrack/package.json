@@ -1,0 +1,11 @@
+{
+  "name": "mcp-vtrack",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "src/server.js",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.10.2",
+    "zod": "^3.23.8",
+    "axios": "^1.7.4"
+  }
+}

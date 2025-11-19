@@ -1,0 +1,21 @@
+.footer_p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, white, #89d0f8);
+    color: white;
+    position: fixed;
+    width: 100%;
+    font-weight: bolder;
+    padding: 10px;
+    bottom: 0;
+    box-shadow: 0px -4px 10px #DADADA;
+}
+
+.copyright {
+    font-family: calibri;
+    font-size: 16px;
+    font-weight: normal;
+    color: #0a223b;
+    text-align: center;
+}

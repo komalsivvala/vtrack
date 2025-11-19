@@ -1,0 +1,20 @@
+.card1{
+    background-color: rgb(252, 252, 252);   
+    box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 350px;
+    height: 100vh;
+    border-radius: 10%;
+}
+.card-p {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Ensure content is vertically centered */
+    font-family: 'Times New Roman', Times, serif;
+    background-image: url("/public/assets/vensai-bg.jpg"); /* Corrected the path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh; /* Ensures the card takes full viewport height */
+    box-sizing: border-box; /* Includes padding and border in width/height calculations */
+}

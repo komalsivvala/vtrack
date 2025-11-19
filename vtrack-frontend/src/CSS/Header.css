@@ -1,0 +1,79 @@
+.Header-p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Ensure proper vertical alignment */
+  background: linear-gradient(to bottom, #89d0f8, white);
+  position: fixed;
+  top: 0; /* Ensure it sticks to the top */
+  width: 100%;
+  padding: 10px 0px; 
+  z-index: 10; /* Ensure it appears above other elements */
+  background-color: rgb(164, 160, 160); /* Keeps the background color */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Fixed box shadow for a subtle effect */
+  font-weight: bold;
+}
+
+.Header-logo {
+  display: flex;
+  align-items: center;
+  margin-right: 15px; 
+}
+.Header-btn{
+  position: relative;
+  right: 20px;
+}
+
+.Header-text {
+  position: absolute;
+  font-size: 27px;
+  left: 630px;
+  top: 20px;
+}
+
+.Header-btn .btn-1 {
+  background-color:white; 
+  color: black;
+  border: none;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-radius: 5px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
+}
+
+.Header-btn .btn-1:hover {
+  background-color: #0056b3; 
+}
+
+.Header-btn .btn-1:active {
+  background-color: #004494; 
+}
+
+.Header-btn .btn-1:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); 
+}
+
+.Header-btn .btn-2 {
+ background-color:white; 
+  color: black;
+  border: none;
+  border-radius: 5px; 
+  font-weight: bolder;
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
+}
+.Header-btn .btn-2:hover {
+  background-color: #0056b3; 
+}
+
+.Header-btn .btn-2:active {
+  background-color: #004494; 
+}
+
+.Header-btn .btn-2:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); 
+}
+
+

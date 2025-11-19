@@ -1,0 +1,95 @@
+.leaveFromEmp_container {
+    position: relative;
+    top: 165px;
+}
+
+.headLine_text {
+    display: flex;
+    column-gap: 200px;
+    background-color: skyblue;
+    padding: 10px;
+    width: 100%;
+}
+
+.form_and_approver_container {
+    display: flex;
+}
+
+.leave_form_container {
+    border: 2px solid rgb(203, 219, 226);
+    width: 40%;
+}
+
+.leave_tbl {
+    width: 100%;
+}
+
+.required {
+    color: red;
+}
+
+.dialog_box {
+    position: absolute;
+    z-index: 9;
+    border: 1px solid lightblue;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    top: 130px;
+    left: 30%;
+}
+
+.privilage_select {
+    position: absolute;
+    left: 21.5%;
+}
+
+.leavemode_select {
+    position: absolute;
+    left: 18%;
+}
+
+.reason_input {
+    width: 250px;
+}
+
+.button_container {
+    display: flex;
+    column-gap: 5px;
+}
+
+.approval_content_text {
+    text-align: center;
+    font-weight: bolder;
+    padding-bottom: 10px;
+    background-color: lightgrey;
+    padding: 10px;
+}
+
+.approvers_heading {
+    text-align: center;
+    font-weight: bolder;
+    padding-bottom: 10px;
+}
+
+.leave_summary_table {
+    border-collapse: collapse;
+    border: 3px solid white;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.leave_summary_table thead {
+    background-color: skyblue;
+}
+
+.leave_summary_table th, .leave_summary_table td {
+    padding: 10px;
+    text-align: center;
+    background-color: lightgrey;
+}
+
+.privilege_leave_note {
+    color: green;
+    margin-top: 10px;
+}

@@ -1,0 +1,57 @@
+/* .LeaveSummary_container {
+    position: relative;
+    top: 130px;
+}
+
+.emp_details_tbl2 {
+    width: 100%; 
+   
+    position: relative;
+    top: 7px;
+    bottom: 10px;
+}
+
+.emp_details_tbl td {
+    padding: 10px;
+    border: 1px solid rgb(93, 242, 93);
+    text-align: center; 
+}
+
+.emp_details_tbl2 td {
+    padding: 10px;
+    border: 1px solid lightslategrey;
+    text-align: center; 
+}
+
+.emp_details_tbl {
+    border: 2px solid lightslategrey;
+}
+
+.export_div {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(202, 108, 108);
+    padding: 10px;
+    color: white;
+}
+
+.btn_export {
+    border-radius: 4px;
+    border-style: none;
+    background-color: lightblue;
+    padding: 5px;
+    font-size: 11px;
+}
+
+.scrollable_table_container {
+    max-height: 200px; 
+    overflow-y: auto;
+}
+
+.tbls_scroll{
+    overflow-y: auto;
+    position: relative;
+    top: 5px;
+    max-height: 400px;
+    border: 1px solid brown;
+} */

@@ -1,0 +1,71 @@
+.lTrans_text {
+    color: white;
+    background-color: skyblue;
+    font-weight: bolder;
+    position: relative;
+    top: 150px;
+    width: 97.5vw;
+    text-align: center;
+    padding: 10px;
+    border-radius: 200px;
+    z-index: 2;
+}
+
+.lTrans_inputs_tbl {
+    position: relative;
+    top: 200px;
+}
+
+.lTrans_inputs_tbl td {
+    padding: 5px;
+}
+
+.scrollable-table-wrapper {
+    position: relative;
+    top: 200px;
+    width: 100%;
+    margin-top: 20px;
+    /* height: 80vh; */
+    /* Adjust height to fit with the footer */
+    overflow-y: auto;
+}
+
+.lTrans_data_tbl {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    background: rgb(47,195,198);
+    background: linear-gradient(90deg, rgba(47,195,198,1) 0%, rgba(30,142,214,1) 35%, rgba(47,195,198,1) 100%);
+}
+
+.lTrans_data_tbl th,
+.lTrans_data_tbl td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: transparent;
+    /* Make cells transparent to show table background */
+}
+.TLD {
+    background-color: rgb(149, 96, 96);
+    position: absolute; 
+    top: 200px;
+    right: 0;
+    padding: 10px;
+    text-align: center;
+    border-radius: 360px;
+    cursor: pointer;
+}
+.teamsLeaveDashboardTbl{
+    border-collapse: collapse;
+    /* position: relative; */
+    /* left: 400px; */
+    text-align: center;
+    background-color: rgb(204, 167, 167);
+    /* overflow-y: scroll;
+    overflow-x: hidden;
+    height: 400px; */
+}
+.teamsLeaveDashboardTbl td,
+.teamsLeaveDashboardTbl th {
+    padding: 7px;
+}

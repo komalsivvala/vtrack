@@ -1,0 +1,57 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .emp-form-card {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+    top: 50px;
+    
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  
+  .input-group label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .update-button {
+    background-color: orange !important;
+  }
+  .requiredIcon{
+    color: red;
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .emp-form-card {
+      width: 90%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .input-group label {
+      font-size: 12px;
+    }
+  }
+  

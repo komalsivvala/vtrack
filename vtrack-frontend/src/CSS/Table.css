@@ -1,0 +1,150 @@
+.ViewPage-table{
+    position: relative;
+    /* right: 0px; */
+    top: 130px;
+    left: 30px;
+    /* overflow-x: scroll; */
+    /* height: 52vh;
+    width: 1550px; */
+    overflow-y: hidden;
+    z-index: 1;
+}
+.disabled-row {
+    background-color: rgb(208, 208, 208);
+    /* text-decoration: line-through; */
+}
+.tableData{
+    width: 97%;
+
+}
+.viewPageTable-pagination{
+    position: relative;
+    top: 160px;
+    display: flex;
+   justify-content: center;
+   /* left: 20px; */
+   z-index: 2;
+}
+.viewPageTable-pagination li{
+    list-style: none;
+    color:  blue;
+    z-index: 3;
+    /* text-decoration: none; */
+}
+.table-td{
+    padding: 10px;
+}
+.pagination-item {
+    display: inline-block;
+    margin: 0 5px; 
+}
+
+.pagination-link {
+    display: inline-block;
+    padding: 5px 10px; 
+    font-size: 18px; /* Smaller font size */
+    color: black; /* Link color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 3px; /* Slightly rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and color */
+}
+
+.pagination-link:hover {
+    background-color: white; /* Light grey background on hover */
+    color: #0056b3; /* Darker blue text on hover */
+}
+
+.pagination-link:active {
+    background-color: #e0e0e0; /* Slightly darker grey on active */
+    color: #004494; /* Even darker blue text when active */
+}
+
+.pagination-link:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Custom focus outline */
+}
+
+.selectBox {
+    position: relative;
+    top: 100px;
+    left: 50px;
+}
+
+.selectBox-ele {
+    display: flex;
+    align-items: center;
+    outline: none;
+    width: 15%;
+    border-radius: 10px;
+    font-weight: bold;
+    border: 1px solid #D1D5DB; /* gray-300 */
+    overflow: hidden;
+    position: relative; /* Ensure relative positioning for absolute children */
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px 40px 10px 10px; /* Adjust padding to leave space for the button */
+    color: #1F2937; /* text-gray-900 */
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+.search-input::placeholder {
+    color: #9CA3AF; /* placeholder-gray-400 */
+}
+
+.search-input:focus {
+    border: none;
+}
+
+.search-button {
+    position: absolute;
+    right: 10px;
+    background-color: transparent; /* Remove background to blend with input */
+    border: none;
+    cursor: pointer;
+    outline: none;
+    color: black; /* text-blue-500 */
+    font-size: 1.2rem; /* Adjust font size to match icon size */
+    padding: 0; /* Remove padding to fit within the input */
+}
+
+.search-button:hover {
+    color: #2563EB; /* text-blue-600 */
+}
+
+.search-button:focus {
+    outline: none;
+}
+
+
+/* Additional style for .empForm-page */
+.empForm-page {
+    position: relative;
+    width: 50%;
+}
+
+.Register-btn{
+    position: absolute;
+    /* bottom:550px; */
+    /* right: 10px; */
+    top:100px;
+    right: 120px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    background-color:blue; 
+    border: none;
+    cursor: pointer;
+    outline: none;
+    color: whitesmoke; 
+    
+
+}
+
+.Register-btn .icon {
+    font-size: 15px; 
+    margin-right: 4px; 
+}
+

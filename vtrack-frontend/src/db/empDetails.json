@@ -1,0 +1,151 @@
+{
+  "empDetails": [
+    {
+      "id": "eba7",
+      "empId": "32",
+      "name": "vamsiiiiiiiiiii",
+      "email": "vamsi@gmail.com",
+      "roll": "full stack developer.......",
+      "contact": "11111111111111111111111",
+      "gender": "Male",
+      "joiningDate": "2024-04-05",
+      "relievingDate": "2024-04-11",
+      "bloodGroup": "O+",
+      "photo": "C:\\fakepath\\vs.jpg",
+      "status": [
+        "Active"
+      ],
+      "update": "2024-05-02",
+      "DOB": "2024-04-17",
+      "anniversaryDate": "2024-04-26",
+      "fatherName": "omg",
+      "motherName": "gi"
+    },
+    {
+      "id": "f211",
+      "empId": "1",
+      "name": "sdasdsdga",
+      "email": "weww@as.com",
+      "roll": "3232",
+      "contact": "2323346745754",
+      "gender": "Male",
+      "joiningDate": "2024-04-19",
+      "relievingDate": "2024-04-05",
+      "bloodGroup": "B+",
+      "photo": "C:\\fakepath\\11 b.jpeg",
+      "status": [
+        "Active"
+      ],
+      "update": "2024-04-19",
+      "DOB": "2024-04-26",
+      "anniversaryDate": "2024-04-08",
+      "fatherName": "ds",
+      "motherName": "dddd"
+    },
+    {
+      "id": "c990",
+      "empId": "hhhu097070`",
+      "name": "uugiu",
+      "email": "giu",
+      "roll": "gi",
+      "contact": "8998",
+      "gender": "Male",
+      "joiningDate": "2024-04-18",
+      "relievingDate": "2024-04-08",
+      "bloodGroup": "AB-",
+      "photo": "C:\\fakepath\\vs.jpg",
+      "status": [
+        "Active"
+      ],
+      "update": "2024-04-26",
+      "DOB": "2024-04-18",
+      "anniversaryDate": "2024-04-09",
+      "fatherName": "sd",
+      "motherName": "hioghoi"
+    },
+    {
+      "id": "c025",
+      "empId": "hhhu097070`",
+      "name": "uugiu",
+      "email": "giu",
+      "roll": "gi",
+      "contact": "8998",
+      "gender": "Male",
+      "joiningDate": "2024-04-18",
+      "relievingDate": "2024-04-08",
+      "bloodGroup": "AB-",
+      "photo": "C:\\fakepath\\vs.jpg",
+      "status": [
+        "Active"
+      ],
+      "update": "2024-04-26",
+      "DOB": "2024-04-18",
+      "anniversaryDate": "2024-04-09",
+      "fatherName": "sd",
+      "motherName": "hioghoi"
+    },
+    {
+      "id": "54a0",
+      "empId": "4983",
+      "name": "oig",
+      "email": "oig",
+      "roll": "oig",
+      "contact": "99",
+      "gender": "Male",
+      "joiningDate": "2024-04-13",
+      "relievingDate": "2024-04-16",
+      "bloodGroup": "AB-",
+      "photo": "C:\\fakepath\\vs.jpg",
+      "status": [
+        "Active"
+      ],
+      "update": "2024-04-25",
+      "DOB": "2024-04-16",
+      "anniversaryDate": "2024-05-04",
+      "fatherName": "uigigu",
+      "motherName": "iugiu"
+    },
+    {
+      "id": "76ff",
+      "empId": "0970",
+      "name": "oiihoi",
+      "email": "hoi",
+      "roll": "h",
+      "contact": "09709",
+      "gender": "Male",
+      "joiningDate": "2024-04-06",
+      "relievingDate": "2024-04-04",
+      "bloodGroup": "O+",
+      "photo": "C:\\fakepath\\vs.jpg",
+      "status": [
+        "Active"
+      ],
+      "update": "2024-04-19",
+      "anniversaryDate": "2024-04-19",
+      "DOB": "2024-05-01",
+      "fatherName": "lihoih",
+      "motherName": "oihho"
+    },
+    {
+      "id": "47bf",
+      "empId": "p7097",
+      "name": "iyoiy",
+      "email": "iy",
+      "roll": "iuy",
+      "contact": "070",
+      "gender": "Male",
+      "joiningDate": "2024-04-10",
+      "relievingDate": "2024-05-03",
+      "bloodGroup": "AB-",
+      "status": [
+        "Active"
+      ],
+      "update": "2024-04-01",
+      "DOB": "2024-04-26",
+      "anniversaryDate": "2024-04-23",
+      "fatherName": "kgoigoi",
+      "motherName": "wetw",
+      "photo": "C:\\fakepath\\vs.jpg"
+    }
+  ]
+}

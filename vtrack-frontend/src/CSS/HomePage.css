@@ -1,0 +1,8 @@
+.content_p {
+    background: linear-gradient(to right, skyblue, rgb(234, 232, 232), skyblue);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

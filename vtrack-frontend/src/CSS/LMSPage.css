@@ -1,0 +1,148 @@
+/* General Styles */
+.lms-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.required {
+    color: red;
+}
+
+/* Header Section */
+.header-section {
+    background-color: #f5f5f5;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.approver-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+/* Main Content Layout */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media (min-width: 992px) {
+    .main-content {
+        flex-direction: row;
+    }
+    
+    .leave-form-section {
+        flex: 1;
+        min-width: 0;
+    }
+    
+    .summary-section {
+        flex: 1;
+        min-width: 0;
+    }
+}
+
+/* Form Section */
+.form-container {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.leave_tbl {
+    width: 100%;
+}
+
+.leave_tbl td {
+    padding: 10px;
+    vertical-align: top;
+}
+
+.privilege-select,
+.mode-select {
+    padding-left: 10px !important;
+}
+
+.submit-btn {
+    background-color: #1976d2 !important;
+    color: white !important;
+    margin-top: 10px;
+}
+
+/* Summary Section */
+.approval-content {
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.approval-title {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.leave_summary_tbl {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+.leave_summary_tbl th,
+.leave_summary_tbl td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.leave_summary_tbl thead {
+    background-color: #e3f2fd;
+}
+
+.leave_summary_tbl tbody {
+    background-color: #f9f9f9;
+}
+
+.note {
+    font-size: 14px;
+    color: #388e3c;
+    padding: 10px;
+    background-color: #e8f5e9;
+    border-radius: 5px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .approver-info {
+        flex-direction: column;
+    }
+    
+    .leave_tbl td {
+        display: block;
+        width: 100%;
+    }
+    
+    .privilege-select,
+    .mode-select {
+        padding-left: 0 !important;
+        padding-top: 5px !important;
+    }
+    
+    .leave-summary_tbl {
+        font-size: 14px;
+    }
+}
+
+/* Dialog Styles */
+.MuiDialog-paper {
+    padding: 20px;
+    min-width: 300px;
+}
