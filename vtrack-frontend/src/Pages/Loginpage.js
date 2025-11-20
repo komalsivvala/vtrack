@@ -322,14 +322,14 @@ function Loginpage() {
                 backgroundPosition: "center",
                 display: "flex",
                 justifyContent: "center",
-                alignItems: "center",
+                alignItems:"center",
             }}
         >
             <Paper
-                elevation={3}
+                elevation={10}
                 sx={{
                     width: isSmallScreen ? "90%" : "60%",
-                    maxWidth: "600px",
+                    maxWidth: "300px",
                     p: 4,
                     textAlign: "center",
                 }}
@@ -337,8 +337,8 @@ function Loginpage() {
                 <img
                     src='/assets/vtrack-logo.png'
                     alt='vtrack logo'
-                    height="200px"
-                    width="300px"
+                    height="150px"
+                    width="150px"
                 />
                 <Divider sx={{ mb: 3 }} />
                 <Grid container spacing={2}>
