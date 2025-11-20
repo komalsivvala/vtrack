@@ -229,8 +229,9 @@ import {
     useTheme,
     IconButton,
     InputAdornment,
+    linearProgressClasses,
 } from "@mui/material";
-import { Visibility, VisibilityOff } from "@mui/icons-material";
+import { Gradient, Visibility, VisibilityOff } from "@mui/icons-material";
 
 function Loginpage() {
     const [errors, setErrors] = useState({});
@@ -323,6 +324,7 @@ function Loginpage() {
                 display: "flex",
                 justifyContent: "center",
                 alignItems:"center",
+              
             }}
         >
             <Paper
@@ -332,6 +334,13 @@ function Loginpage() {
                     maxWidth: "300px",
                     p: 4,
                     textAlign: "center",
+                    //for glassy look
+                    background : "linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.05) 100%)",
+                    boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
+                    backdropFilter: "blur(10px)",
+                    WebkitBackdropFilter: "blur(10px)",
+                    border: "1px solid rgba(255, 255, 255, 0.18)",
+                    borderRadius: 10,
                 }}
             >
                 <img
