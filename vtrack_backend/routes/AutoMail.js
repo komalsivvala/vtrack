@@ -145,6 +145,10 @@ const transporter = nodemailer.createTransport({
     }
 });
 
+// Primary administrative email to receive copies of automated mails.
+// Can be overridden with the ADMIN_EMAIL environment variable.
+const ADMIN_EMAIL = process.env.ADMIN_EMAIL || 'sivvalakomalnaidu@gmail.com';
+
 // Execute queries and schedule jobs
 (async () => {
     const client = await postgressqlConnection();
@@ -179,7 +183,7 @@ const transporter = nodemailer.createTransport({
                     schedule.scheduleJob(sendTime, () => {
                         const mailOptions = {
                             from: 'vtrack@vensaiinc.com',
-                            to: "hr@vensaiinc.com",
+                            to: ADMIN_EMAIL,
                             cc: email, // sending a copy to the employee
                             subject: 'Birthday Reminder',
                             html: `
@@ -231,8 +235,8 @@ const transporter = nodemailer.createTransport({
                     schedule.scheduleJob(scheduledTime, () => {
                         const mailOptions = {
                             from: 'vtrack@vensaiinc.com',
-                            to: 'hr@vensaiinc.com',
-                            cc: email,
+                            to: ADMIN_EMAIL,
+                            cc: ADMIN_EMAIL,
                             subject: 'Work Anniversary Reminder',
                             html: `
                             <p>Dear <strong>${name}</strong>!</p>
@@ -277,7 +281,8 @@ const transporter = nodemailer.createTransport({
 
             const mailOptions1 = {
                 from: 'vtrack@vensaiinc.com',
-                to: email,
+                to: ADMIN_EMAIL,
+           
                 subject: 'Time Sheet Reminder',
                 text: `Hello ${name},\n\nThis is your Time Sheet reminder email.\n\nKindly fill it.`
             };
@@ -305,7 +310,7 @@ router.post("/lms-register", async(req, res, next)=>{
     const data=req.body;
     const mailOptions = {
         from: 'vtrack@vensaiinc.com',
-        to: data.email,
+        to: ADMIN_EMAIL,
         subject: data.subject,
         html: `
             <p>Dear <strong>${data.name}</strong>!</p>
@@ -334,8 +339,8 @@ router.post("/lms-leaves", async(req, res, next)=>{
     const data=req.body;
     const mailOptions = {
         from: 'vtrack@vensaiinc.com',
-        to: data.toEmail,
-        cc:data.ccEmail,
+        to: ADMIN_EMAIL,
+        cc:ADMIN_EMAIL,
         subject: data.subject,
         html: `
             <p>Dear <strong>${data.toName}</strong>!</p>
