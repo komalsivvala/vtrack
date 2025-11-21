@@ -3,6 +3,20 @@ import "../CSS/ForgotPwd.css";
 import emailjs from '@emailjs/browser';
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import {
+  Box,
+  Paper,
+  Grid,
+  TextField,
+  Button,
+  Typography,
+  Divider,
+  InputAdornment,
+  IconButton,
+  useMediaQuery
+} from "@mui/material";
+
+import { Visibility, VisibilityOff } from "@mui/icons-material";
 
 const ForgotempPassword = () => {
     const [randomData, setRandomData] = useState("");
@@ -17,6 +31,8 @@ const ForgotempPassword = () => {
     const [input, setInput] = useState("");
     const [isOtpValid, setIsOtpValid] = useState(false);
     const [showPassword,setShowPassword]=useState(false);
+    const isSmallScreen = useMediaQuery("(max-width:600px)");
+
 
     useEffect(() => {
         let result = '';
@@ -102,177 +118,190 @@ const ForgotempPassword = () => {
     }
 
     return (
-        <div className="card-p">
-            <div className="card1">
-                <div>
-                    <img height="250px" marginLeft="60px" style={{position: "absolute"}} src="/assets/vtrack-logo.png" alt="Vtrack logo" />
-                </div>
-                {isOtpValid ? (
-                    <>
-                        <strong style={{ fontFamily: "cursive", position: "absolute", top: "330px", marginLeft: "90px" }}>Create new Password</strong>
-                        <div>
-                            <table align="center" style={{ position: "absolute", top: "370px", marginLeft: "60px" }}>
-                                <thead></thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <input
-                                                type={showPassword ?"text":"password"}
-                                                value={confirmInput.emp_password}
-                                                name="emp_password"
-                                                style={{
-                                                    height: "25px",
-                                                    fontWeight: "bolder",
-                                                    width: "220px",
-                                                    fontFamily: "'Times New Roman', Times, serif"
-                                                }}
-                                                onChange={changeHandler}
-                                                placeholder="New password"
-                                            />
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input
-                                                type="password"
-                                                name="confirmemp_password"
-                                                value={confirmInput.confirmemp_password}
-                                                style={{
-                                                    height: "25px",
-                                                    fontWeight: "bolder",
-                                                    width: "220px",
-                                                    fontFamily: "'Times New Roman', Times, serif"
-                                                }}
-                                                onChange={changeHandler}
-                                                placeholder="Confirm password"
-                                            />
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input type="checkbox" checked={showPassword} onClick={passwordToggle}/>Show password
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <button
-                                                onClick={confirmSubmitHandler}
-                                                style={{
-                                                    width: "227px",
-                                                    padding: "5px",
-                                                    backgroundColor: "rgb(46, 133, 233)",
-                                                    color: "white",
-                                                    borderStyle: "none",
-                                                    fontFamily: "'Times New Roman', Times, serif",
-                                                    fontWeight: "bolder"
-                                                }}
-                                            >
-                                                Submit
-                                            </button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </>
-                ) : (
-                    isValid ? (
-                        <>
-                            <strong style={{ fontFamily: "times new roman", position: "absolute", top: "350px", marginLeft: "70px" }}>Enter your registered email id</strong>
-                            <table align="center" style={{ position: "absolute", top: "370px", marginLeft: "60px" }}>
-                                <thead></thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <input
-                                                required
-                                                onChange={(e) => setEmpId(e.target.value)}
-                                                value={empId}
-                                                style={{
-                                                    height: "25px",
-                                                    fontWeight: "bolder",
-                                                    width: "220px",
-                                                    fontFamily: "'Times New Roman', Times, serif"
-                                                }}
-                                                type="text"
-                                                placeholder="Employee id"
-                                            />
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <button
-                                                onClick={submitHandler}
-                                                style={{
-                                                    width: "227px",
-                                                    padding: "5px",
-                                                    backgroundColor: "rgb(46, 133, 233)",
-                                                    color: "white",
-                                                    borderStyle: "none",
-                                                    fontFamily: "'Times New Roman', Times, serif",
-                                                    fontWeight: "bolder"
-                                                }}
-                                            >
-                                                Submit
-                                            </button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </>
-                    ) : (
-                        <>
-                            <strong style={{ fontFamily: "cursive", position: "absolute", top: "330px", marginLeft: "120px" }}>Enter OTP</strong>
-                            <table align="center" style={{ position: "absolute", top: "370px", marginLeft: "60px" }}>
-                                <thead></thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <input
-                                                type={showPassword ?"text":"password"}
-                                                name="otp"
-                                                value={input}
-                                                onChange={(e) => setInput(e.target.value)}
-                                                style={{
-                                                    height: "25px",
-                                                    fontWeight: "bolder",
-                                                    width: "220px",
-                                                    fontFamily: "'Times New Roman', Times, serif"
-                                                }}
-                                            />
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td style={{fontFamily:"fantasy"}}>
-                                            <input type="checkbox" checked={showPassword} onClick={passwordToggle}/>Show OTP
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <button
-                                                onClick={otpHandler}
-                                                style={{
-                                                    width: "227px",
-                                                    padding: "5px",
-                                                    backgroundColor: "rgb(46, 133, 233)",
-                                                    color: "white",
-                                                    borderStyle: "none",
-                                                    fontFamily: "'Times New Roman', Times, serif",
-                                                    fontWeight: "bolder"
-                                                }}
-                                            >
-                                                Submit
-                                            </button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </>
-                    )
-                )}
-            </div>
-        </div>
-    );
+  <Box
+    sx={{
+      minHeight: "100vh",
+      backgroundImage: `url("/assets/vensai-bg.jpg")`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "flex-start",
+      paddingLeft: "150px",
+    }}
+  >
+    <Paper
+      elevation={10}
+      sx={{
+        width: isSmallScreen ? "90%" : "60%",
+        maxWidth: "300px",
+        height: "73vh",
+        p: 4,
+        textAlign: "center",
+        background:
+          "linear-gradient(135deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.05) 100%)",
+        boxShadow: "0 8px 32px rgba(31,38,135,0.37)",
+        backdropFilter: "blur(10px)",
+        WebkitBackdropFilter: "blur(10px)",
+        border: "1px solid rgba(255,255,255,0.18)",
+        borderRadius: 10,
+      }}
+    >
+      {/* Logo */}
+      <img
+        src="/assets/vtrack-logo.png"
+        alt="vtrack logo"
+        height="150px"
+        width="150px"
+      />
+
+      <Divider sx={{ my: 2 }} />
+
+      {/* STEP 1 — ENTER EMPLOYEE ID */}
+      {isValid && !isOtpValid && (
+        <Grid container spacing={2}>
+          <Grid item xs={12}>
+            <Typography variant="h6" sx={{ mb: 1, fontFamily: "Times New Roman" }}>
+              Enter Employee ID
+            </Typography>
+            <TextField
+              fullWidth
+              label="Employee ID"
+              value={empId}
+              onChange={(e) => setEmpId(e.target.value)}
+            />
+          </Grid>
+
+          <Grid item xs={12}>
+            <Button
+              fullWidth
+              variant="contained"
+              onClick={submitHandler}
+              sx={{
+                background:
+                  "linear-gradient(to right, #0d3a56, #134f6f, #2286b9)",
+                color: "#fff",
+                "&:hover": {
+                  background:
+                    "linear-gradient(to right, #134f6f, #2286b9, #0d3a56)",
+                },
+              }}
+            >
+              Send OTP
+            </Button>
+          </Grid>
+        </Grid>
+      )}
+
+      {/* STEP 2 — ENTER OTP */}
+      {!isValid && !isOtpValid && (
+        <Grid container spacing={2}>
+          <Grid item xs={12}>
+            <Typography variant="h6" sx={{ mb: 1, fontFamily: "Times New Roman" }}>
+              Enter OTP
+            </Typography>
+
+            <TextField
+              fullWidth
+              type={showPassword ? "text" : "password"}
+              label="OTP"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              InputProps={{
+                endAdornment: (
+                  <InputAdornment position="end">
+                    <IconButton onClick={passwordToggle}>
+                      {showPassword ? <VisibilityOff /> : <Visibility />}
+                    </IconButton>
+                  </InputAdornment>
+                ),
+              }}
+            />
+          </Grid>
+
+          <Grid item xs={12}>
+            <Button
+              fullWidth
+              variant="contained"
+              onClick={otpHandler}
+              sx={{
+                background:
+                  "linear-gradient(to right, #0d3a56, #134f6f, #2286b9)",
+                color: "#fff",
+                "&:hover": {
+                  background:
+                    "linear-gradient(to right, #134f6f, #2286b9, #0d3a56)",
+                },
+              }}
+            >
+              Verify OTP
+            </Button>
+          </Grid>
+        </Grid>
+      )}
+
+      {/* STEP 3 — RESET PASSWORD */}
+      {isOtpValid && (
+        <Grid container spacing={2}>
+          <Grid item xs={12}>
+            <Typography variant="h6" sx={{ mb: 1, fontFamily: "Times New Roman" }}>
+              Create New Password
+            </Typography>
+
+            <TextField
+              fullWidth
+              type={showPassword ? "text" : "password"}
+              label="New Password"
+              name="emp_password"
+              value={confirmInput.emp_password}
+              onChange={changeHandler}
+            />
+
+            <TextField
+              fullWidth
+              sx={{ mt: 2 }}
+              type="password"
+              label="Confirm Password"
+              name="confirmemp_password"
+              value={confirmInput.confirmemp_password}
+              onChange={changeHandler}
+            />
+          </Grid>
+
+          <Grid item xs={12}>
+            <Button
+              fullWidth
+              variant="contained"
+              onClick={confirmSubmitHandler}
+              sx={{
+                background:
+                  "linear-gradient(to right, #0d3a56, #134f6f, #2286b9)",
+                color: "#fff",
+                "&:hover": {
+                  background:
+                    "linear-gradient(to right, #134f6f, #2286b9, #0d3a56)",
+                },
+              }}
+            >
+              Submit
+            </Button>
+          </Grid>
+        </Grid>
+      )}
+    </Paper>
+
+    {/* SIDE BRAND LOGO */}
+    <img
+      src="/assets/vensai-logo.png"
+      alt="vensai logo"
+      height="150px"
+      width="300px"
+      style={{ marginLeft: "250px" }}
+      className="animate-logo"
+    />
+  </Box>
+);
+
 };
 
 export default ForgotempPassword;

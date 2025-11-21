@@ -1,20 +1,30 @@
-.card1{
-    background-color: rgb(252, 252, 252);   
-    box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+.card1 {
+    width:60%;
     width: 350px;
     height: 100vh;
     border-radius: 10%;
+
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.05) 100%);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
+
+
 .card-p {
     display: flex;
     justify-content: center;
     align-items: center; /* Ensure content is vertically centered */
     font-family: 'Times New Roman', Times, serif;
-    background-image: url("/public/assets/vensai-bg.jpg"); /* Corrected the path */
+    background-image: url("/public/assets/vensai-bg1.jpg"); /* Corrected the path */
+    display: flex;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
     min-height: 100vh; /* Ensures the card takes full viewport height */
-    box-sizing: border-box; /* Includes padding and border in width/height calculations */
+    /* Includes padding and border in width/height calculations */
 }

@@ -318,13 +318,14 @@ function Loginpage() {
         <Box
             sx={{
                 minHeight: "100vh",
-                backgroundImage: `url("/assets/vensai-bg1.jpg")`,
+                backgroundImage: `url("/assets/vensai-bg.jpg")`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 display: "flex",
-                justifyContent: "flex-start",
-                paddingLeft: "150px",
+                justifyContent: { xs: "center", md: "flex-start" },
+                paddingLeft: { xs: 0, md: "150px" },
                 alignItems:"center",
+                gap: "40px",
               
             }}
         >
@@ -431,8 +432,10 @@ function Loginpage() {
              height="150px"
              width="300px"
                  className="animate-logo"
+                 
                  style={{
                       marginLeft: "250px"  // move image horizontally
+                      
              }}
 />
 
