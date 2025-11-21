@@ -318,11 +318,12 @@ function Loginpage() {
         <Box
             sx={{
                 minHeight: "100vh",
-                backgroundImage: `url("/assets/vensai-bg.jpg")`,
+                backgroundImage: `url("/assets/vensai-bg1.jpg")`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 display: "flex",
-                justifyContent: "center",
+                justifyContent: "flex-start",
+                paddingLeft: "150px",
                 alignItems:"center",
               
             }}
@@ -331,6 +332,7 @@ function Loginpage() {
                 elevation={10}
                 sx={{
                     width: isSmallScreen ? "90%" : "60%",
+                    alignItems: "",
                     maxWidth: "300px",
                     p: 4,
                     textAlign: "center",
@@ -349,6 +351,7 @@ function Loginpage() {
                     height="150px"
                     width="150px"
                 />
+                
                 <Divider sx={{ mb: 3 }} />
                 <Grid container spacing={2}>
                     <Grid item xs={12}>
@@ -422,6 +425,17 @@ function Loginpage() {
                     Forgot Password?
                 </Typography>
             </Paper>
+           <img
+               src="/assets/vensai-logo.png"
+             alt="vensai logo"
+             height="150px"
+             width="300px"
+                 className="animate-logo"
+                 style={{
+                      marginLeft: "250px"  // move image horizontally
+             }}
+/>
+
         </Box>
     );
 }
