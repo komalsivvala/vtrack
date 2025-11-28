@@ -13,6 +13,8 @@ var empDetailsRouter = require("./routes/EmpDetails");
 var employeeDetailsRouter = require("./routes/EmployeeDetails");
 var AutoMailRouter=require("./routes/AutoMail");
 var LMS_page=require("./routes/LMS-details");
+var chatRoute = require("./routes/chatRoute");
+
 
 var app = express();
 
@@ -36,6 +38,8 @@ app.use("/empPortal", skillSetInfoRouter);
 app.use("/employeeDetails", employeeDetailsRouter);
 app.use("/autoMail",AutoMailRouter);
 app.use("/LMS-page",LMS_page);
+app.use("/api", chatRoute);
+
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

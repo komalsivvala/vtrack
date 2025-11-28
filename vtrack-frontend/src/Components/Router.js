@@ -64,6 +64,8 @@ import LMS_YearReport from '../Pages/LMS/LMS_YearReport';
 import LMS_LeaveSummary from '../Pages/LMS/LMS_LeaveSummary';
 import LMS_LeaveTransaction from '../Pages/LMS/LMS_LeaveTransaction';
 import LMS_UploadDoc from '../Pages/LMS/LMS_UploadDoc';
+import ChatbotPage from '../Pages/Chatbot';
+
 
 const Router = () => {
   const role = sessionStorage.getItem("role");
@@ -72,6 +74,7 @@ const Router = () => {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Loginpage />} />
+        <Route path="/chatbot" element={<ChatbotPage />} />
         <Route path='/forgotPwd' element={<ForgotPwd />} />
         <Route element={<ProtectedRouting />}>
         <Route path='/home-page' element={<HomePage />} />

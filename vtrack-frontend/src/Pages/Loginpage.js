@@ -437,6 +437,7 @@ function Loginpage() {
                       marginLeft: "250px"  // move image horizontally
                       
              }}
+             onClick={() => navigate("/chatbot")}  // 👈 IMPORTANT
 />
 
         </Box>
