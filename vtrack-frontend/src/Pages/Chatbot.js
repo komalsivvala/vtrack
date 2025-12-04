@@ -1,25 +1,34 @@
 import React, { useState } from "react";
+import {
+  Box,
+  Paper,
+  TextField,
+  IconButton,
+  Typography,
+  InputAdornment,
+  Divider,
+  useTheme,
+} from "@mui/material";
+import SendIcon from "@mui/icons-material/Send";
 
 function Chatbot() {
   const [message, setMessage] = useState("");
   const [chat, setChat] = useState([]);
+ 
 
   const sendMessage = async () => {
     if (!message.trim()) return;
 
-    // Add user message
     setChat((prev) => [...prev, { sender: "user", text: message }]);
 
     try {
-      const res = await fetch("http://localhost:3003/api/chat", {
+      const res = await fetch("http://localhost:3004/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message }),
       });
 
       const data = await res.json();
-
-      // Add bot message
       setChat((prev) => [...prev, { sender: "bot", text: data.reply }]);
     } catch (error) {
       setChat((prev) => [
@@ -31,65 +40,101 @@ function Chatbot() {
     setMessage("");
   };
 
-  return React.createElement(
-    "div",
-    { style: { width: "400px", margin: "auto" } },
+  return (
+    <Box
+      sx={{
+        minHeight: "100vh",
+        backgroundImage: `url("/assets/vensai-bg.jpg")`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        p: 2,
+      }}
+    >
+      <Paper
+        elevation={8}
+        sx={{
+          width: "90%",
+          maxWidth: "450px",
+          p: 3,
+          borderRadius: 4,
+          background:
+            "linear-gradient(135deg, rgba(255,255,255,0.25), rgba(255,255,255,0.05))",
+          boxShadow: "0 8px 32px rgba(31, 38, 135, 0.37)",
+          backdropFilter: "blur(10px)",
+          WebkitBackdropFilter: "blur(10px)",
+          border: "1px solid rgba(255,255,255,0.18)",
+        }}
+      >
+        <Typography variant="h5" textAlign="center" fontWeight="bold" mb={1}>
+          VTrack Chatbot
+        </Typography>
 
-    React.createElement("h2", null, "VTrack Chatbot"),
+        <Divider sx={{ mb: 2 }} />
 
-    // Chat Window
-    React.createElement(
-      "div",
-      {
-        style: {
-          height: "300px",
-          border: "1px solid #c53838ff",
-          padding: "10px",
-          overflowY: "scroll",
-          marginBottom: "10px",
-        },
-      },
-      chat.map((msg, i) =>
-        React.createElement(
-          "p",
-          {
-            key: i,
-            style: {
-              textAlign: msg.sender === "user" ? "right" : "left",
-              backgroundColor: msg.sender === "user" ? "#d1e7ff" : "#eee",
-              padding: "6px",
-              borderRadius: "6px",
-            },
-          },
-          msg.text
-        )
-      )
-    ),
+        {/* Chat Window */}
+        <Box
+          sx={{
+            height: "350px",
+            overflowY: "auto",
+            p: 2,
+            borderRadius: 2,
+            border: "1px solid rgba(255,255,255,0.3)",
+            mb: 2,
+            background: "rgba(255,255,255,0.2)",
+          }}
+        >
+          {chat.map((msg, i) => (
+            <Box
+              key={i}
+              sx={{
+                display: "flex",
+                justifyContent: msg.sender === "user" ? "flex-end" : "flex-start",
+                mb: 1,
+              }}
+            >
+              <Box
+                sx={{
+                  p: 1.2,
+                  maxWidth: "75%",
+                  bgcolor: msg.sender === "user" ? "#d1e7ff" : "#f3f3f3",
+                  borderRadius: 3,
+                  fontSize: "14px",
+                }}
+              >
+                {msg.text}
+              </Box>
+            </Box>
+          ))}
+        </Box>
 
-    // Input Field
-    React.createElement("input", {
-      type: "text",
-      placeholder: "Type message...",
-      value: message,
-      onChange: (e) => setMessage(e.target.value),
-      style: { width: "75%", padding: "8px" },
-    }),
-
-    // Send Button
-    React.createElement(
-      "button",
-      {
-        onClick: sendMessage,
-        style: {
-          width: "20%",
-          padding: "8px",
-          marginLeft: "5px",
-          background: "#007bff",
-          color: "#fff",
-        },
-      },
-      "Send"
-    )
+        {/* Message Input */}
+        <Box sx={{ display: "flex", gap: 1 }}>
+          <TextField
+            fullWidth
+            placeholder="Type message..."
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            variant="outlined"
+            sx={{
+              bgcolor: "white",
+              borderRadius: 2,
+            }}
+            InputProps={{
+              endAdornment: (
+                <InputAdornment position="end">
+                  <IconButton color="primary" onClick={sendMessage}>
+                    <SendIcon />
+                  </IconButton>
+                </InputAdornment>
+              ),
+            }}
+          />
+        </Box>
+      </Paper>
+    </Box>
   );
 }
 
